@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .main-nav-container {
     /* border-right: 1px solid black; */
 }
@@ -29,6 +35,249 @@
 #hideSidebar{
     cursor: pointer;
 }
+
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 40%;
+}
+.right{
+    width: 60%;
+}
+.image{
+    width: 100%;
+    max-height: 350px;
+}
+
+
+
+.section-two{
+    display: flex;
+    justify-content: space-between;
+}
+.login-con{
+    width: 30%;
+    position: relative;
+}
+.login{
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -90%);
+    padding: 1px 0;
+}
+.login p {
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.form-con{
+    background-color: #999;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.reg-login{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.reg-new{
+    width: 40%;
+}
+.login-old{
+    width: 60%;
+}
+.reg-login p{
+    margin: 0;
+    padding: 10px;
+    border-radius: 20px 20px 0px 0px;
+}
+.active-reg-login{
+    background-color: #fff;
+}
+
+form{
+    width: 100%;
+    background-color: #fff;
+    padding: 2px 0px;
+    border-radius: 0 20px 20px 20px;
+}
+form input.text{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    width: 90%;
+    margin: 8px 0 8px 2%;
+}
+form input[type="submit"]{
+    background-color: rgb(36, 235, 36);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 5px 10px;
+    margin: 10px auto;
+}
+form input::placeholder{
+    color: #000;
+    font-size: 12px;
+}
+.terms{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2px;
+    font-size: 12px;
+}
+.currency{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.sub-nav{
+    margin: 0;
+    width: 70%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.sub-nav-list{
+    padding: 25px 10px;
+    align-items: center;
+}
+.font-awesome{
+    text-align: center;
+}
+.awesome-style{
+    color: #E38C3C;
+}
+.sub-nav-link{
+    font-size: 10px;
+    font-weight: 600;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+.section-three{
+    background-color: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 30px 10px 80px;
+}
+.account{
+    border-right: 1px solid #000;
+}
+.account, .address {
+    width: 49%;
+}
+.account-types{
+    margin-top: 20px;
+}
+.account-header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.account-type{
+    margin: 0;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.address{
+    text-align: right;
+}
+.address-header{
+    margin: 0;
+}
+.address-types{
+    margin-top: 10px;
+}
+.address-type{
+    margin: 0;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-four{
+    text-align: center;
+}
+.section-four-header{
+    color: red;
+    font-style: italic;
+}
+.section-four-para{
+    width: 40%;
+    margin: auto;
+}
+.section-four-des{
+    font-size: 10px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media all and (max-width:992px) {
+    .section-two{
+        flex-wrap: wrap;
+    }
+    .login-con{
+        width: 100%;
+    }
+    .login{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sub-nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .sub-nav-list{
+        padding: 10px;
+    }
+    .section-four-para{
+        width: 70%;
+    }
+}
+
+@media all and (max-width:576px) {
+    .section-three{
+        padding: 10px;
+    }
+    .account{
+        border-right: none;
+    }
+    .account, .address {
+        width: 100%;
+    }
+    
+    .address{
+        text-align: left;
+    } 
+    .section-four-para{
+        width: 100%;
+    }  
+}
+
+
 /* Media Queries */
 @media(max-width: 770px) {
     img#my-logo{

@@ -19,3 +19,22 @@ $('#hideSidebar, .overlay').on('click', function () {
     $('.overlay').removeClass('active');
     $('#wrapper').addClass('pt-4')
 });
+
+
+let changeColor = (event) => {
+    // console.log(event.target)
+    let btn = document.querySelectorAll(".reg-login-btn")
+    for (i=0; i<=btn.length-1; i++) {
+        btn[i].classList.remove("active-reg-login") 
+        if(event.target == btn[0]) {
+            document.querySelector("form").style.borderRadius = "0 20px 20px 20px"
+        } else if (event.target == btn[1]){
+            document.querySelector("form").style.borderRadius = "20px 0px 20px 20px"
+        }
+    }
+    event.target.classList.add("active-reg-login")
+}
+
+document.querySelectorAll(".reg-login-btn").forEach(addColor = () => {
+    addEventListener("click", changeColor)
+})

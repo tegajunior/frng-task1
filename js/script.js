@@ -7,7 +7,7 @@ $('#showSidebar').on('click', function () {
     $('#navigation-mobile-container').removeClass('col-1');
     $('#navigation-mobile-container').addClass('col');
 
-    //$('.overlay').addClass('active');
+    $('.overlay').addClass('active');
 
 });
 

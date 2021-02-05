@@ -16,12 +16,12 @@ body{
     padding-left: 4px;
     color: black;
     letter-spacing: 0.1rem;
+    border-right: 1px solid black;
+}
+div .my-nav-link:last-of-type {
+    border-right: none;
 }
 
-.vl {
-    border-left: 2px inset black;
-    height: 10px;
-}
 .nav {
 }
 .bg-2 {
@@ -277,7 +277,25 @@ form input::placeholder{
     }  
 }
 
-
+/* Overlay Styles */
+.overlay{
+    display: none;
+    position: fixed;
+    /* full screen */
+    width: 100vw;
+    height: 100vh;
+    /* transparent black */
+    background: rgba(0, 0, 0, 0.7);
+    /* middle layer, i.e. appears below the sidebar */
+    z-index: 998;
+    opacity: 0;
+    /* animate the transition */
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
 /* Media Queries */
 @media(max-width: 770px) {
     img#my-logo{
@@ -294,5 +312,8 @@ form input::placeholder{
       }
       .nav {
           background-color: #EDEDED;
-      }
+     }
+     .my-nav-link {
+         border-right: none;
+     }
 }
